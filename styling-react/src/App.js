@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.css';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 class App extends Component {
+
+  state = {
+    isBlue: false,
+  }
+
+  handleClick = () => {
+    this.setState({
+      isBlue: !this.state.isBlue,
+    })
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+      <button onClick={this.handleClick}>버튼</button>
+        <div className={cx('box', {
+          blue: this.state.isBlue
+        })}>
+        
+        </div>
       </div>
+      
     );
   }
 }
