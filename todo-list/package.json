@@ -64,7 +64,24 @@
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "serviceworker": true
+    },
+    "rules": {
+      "react/prefer-stateless-function": 0,
+      "react/jsx-filename-extension": 0,
+      "react/jsx-one-expression-per-line": 0,
+      "no-use-before-define": 1,
+      "no-param-reassign": 1,
+      "react/prop-types": 1,
+      "jsx-a11y/no-static-element-interactions": 1,
+      "jsx-a11y/click-events-have-key-events": 1
+    }
   },
   "browserslist": [
     ">0.2%",

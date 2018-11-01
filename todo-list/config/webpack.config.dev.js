@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 
 const fs = require('fs');
 const path = require('path');
@@ -11,12 +11,12 @@ const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
-const getClientEnvironment = require('./env');
 const paths = require('./paths');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const getClientEnvironment = require('./env');
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -111,7 +111,7 @@ module.exports = {
     // There are also additional JS chunk files if you use code splitting.
     chunkFilename: 'static/js/[name].chunk.js',
     // This is the URL that app is served from. We use "/" in development.
-    publicPath: publicPath,
+    publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
@@ -301,7 +301,8 @@ module.exports = {
             use: getStyleLoaders({ importLoaders: 2 }).concat({
               loader: require.resolve('sass-loader'),
               options: {
-                includePaths: [paths.appSrc + '/styles']
+                includePaths: [`${paths.appSrc  }/styles`],
+                data: `@import 'utils.module.scss';`
               }
             })
           },
@@ -379,7 +380,7 @@ module.exports = {
     // having to parse `index.html`.
     new ManifestPlugin({
       fileName: 'asset-manifest.json',
-      publicPath: publicPath,
+      publicPath,
     }),
     // TypeScript type checking
     useTypeScript &&
