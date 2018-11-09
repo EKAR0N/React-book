@@ -91,7 +91,7 @@ class App extends Component {
 
     return (
       <PageTemplate>
-        <TodoInput onChange={handleChange} onInsert={handleInsert} value={input}/>
+        <TodoInput onChange={handleChange} onInsert={handleInsert} value={input}/> {/* PageTemplate's children */}
         <TodoList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
       </PageTemplate>
     );

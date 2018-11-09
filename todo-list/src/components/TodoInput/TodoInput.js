@@ -10,8 +10,8 @@ const cx = classNames.bind(styles);
   onChange: 인풋 변경 이벤트
   onInsert: 추가버튼 클릭 이벤트
 */
-const TodoInput = ({value, onChange, onInsert}) => {
-  
+const TodoInput = ({value, onChange, onInsert}) => { // 비구조화 할당
+ 
   // 엔터키가 눌리면 onInsert 를 실행합니다.
   const handleKeyPress = (e) => {
     if(e.key === 'Enter') {
