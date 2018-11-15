@@ -13,13 +13,13 @@ class App extends Component {
   getAPOD = async (date) => {
     try {
       const response = await api.getAPOD(date);
+      // eslint-disable-next-line
       console.log(response);
     } catch (e) {
+      // eslint-disable-next-line
       console.log(e);
     }
   }
-
-  
 
   render() {
     return (
