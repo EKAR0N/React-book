@@ -6,6 +6,7 @@ const a = () => 2;
 class App extends Component {
   render() {
     return <SassComponent />;
+    <SassComponent />;
   }
 }
 
