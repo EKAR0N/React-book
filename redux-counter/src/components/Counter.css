@@ -1,16 +1,13 @@
 .Counter {
-  /* 레이아웃 */
+  /* layout */
   width: 10rem;
   height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  /* 색상 */
   color: white;
-  /* font */
   font-size: 3rem;
-  /* etc */
   border-radius: 100%;
   cursor: pointer;
   user-select: none;

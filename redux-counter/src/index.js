@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './containers/App';
+import App from './container/App';
 import * as serviceWorker from './serviceWorker';
 
-// redux 관련 불러오기
+// redux
 import { createStore } from 'redux';
-import reducers from './reducers';
-import { Provider } from 'react-redux';
+import reducers from './reducers/index';
+import { Provider } from "react-redux";
 
+// create Store
 const store = createStore(reducers);
 
 ReactDOM.render(
