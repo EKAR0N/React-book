@@ -25,8 +25,8 @@ export function getRandomColor() {
 }
 
 const mapStateToProps = (state) => ({
-  color: state.color,
-  number: state.number
+  color: state.colorData.color,
+  number: state.numberData.number
 });
 
 // 액션 생성 함수를 이용하여 액션 생성, 이를 dispatch하는 함수를 만들어 props로 연결
