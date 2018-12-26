@@ -27,4 +27,3 @@ const mapToDispatch = (dispatch) => ({
 });
 
 export default connect(null, mapToDispatch)(App);
-
