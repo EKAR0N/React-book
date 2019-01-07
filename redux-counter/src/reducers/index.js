@@ -9,7 +9,7 @@ const initialState = {
   ]
 };
 
-function counter(state = initialState, action) {
+const counter = (state = initialState, action) => {
   const { counters } = state;
 
   switch (action.type) {
