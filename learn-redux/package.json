@@ -1,0 +1,42 @@
+{
+  "name": "colorful-counter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^6.0.0",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "airbnb",
+      "prettier"
+    ],
+    "rules": {
+      "react/prefer-stateless-function": 0,
+      "react/jsx-filename-extension": 0,
+      "react/jsx-one-expression-per-line": 0,
+      "react/no-unused-state": 1,
+      "react/destructuring-assignment": 1,
+      "arrow-body-style": 1,
+      "no-unused-vars": 1,
+      "react/prop-types": 1,
+      "jsx-a11y/interactive-supports-focus": 1,
+      "jsx-a11y/click-events-have-key-events": 1,
+      "jsx-a11y/no-static-element-interactions": 1
+    },
+    "env": {
+      "browser": true
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
