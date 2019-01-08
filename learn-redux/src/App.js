@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import PaletteContainer from './containers/PaletteContainer';
-import WaitingList from './components/WaitingList';
+import WaitingListContainer from './containers/WaitingListContainer';
 import CounterContainder from './containers/CounterContainer';
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <PaletteContainer />
         <CounterContainder />
-        <WaitingList />
+        <WaitingListContainer />
       </div>
     );
   }
