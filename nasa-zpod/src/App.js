@@ -17,7 +17,6 @@ class App extends Component {
 
   componentDidMount() {
     this.getAPOD();
-    console.log()
   }
 
   getAPOD = async (date) => {
@@ -30,7 +29,6 @@ class App extends Component {
 
     try {
       const response = await api.getAPOD(date);
-      console.log(response);
       // 비구조화 할당 , 새로운 이름
       const { date: retrievedDate, url, media_type: mediaType} = response.data;
 
