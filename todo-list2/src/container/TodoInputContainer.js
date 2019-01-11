@@ -13,7 +13,8 @@ class TodoInputContainer extends Component {
   id = 1;
 
   getId = () => {
-    this.id = this.id + 1 // 현재 값에서 1을 더한 값을 반환
+    this.id += 1;
+    return this.id;
   };
 
   handleChange = e => {
