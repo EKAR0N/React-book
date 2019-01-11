@@ -17,6 +17,7 @@ class App extends Component {
 
   componentDidMount() {
     this.getAPOD();
+    console.log()
   }
 
   getAPOD = async (date) => {
@@ -29,8 +30,9 @@ class App extends Component {
 
     try {
       const response = await api.getAPOD(date);
+      console.log(response);
       // 비구조화 할당 , 새로운 이름
-      const { date: retrievedDate, url, media_Type: mediaType} = response.data;
+      const { date: retrievedDate, url, media_type: mediaType} = response.data;
 
       if (!this.state.maxDate) {
         // 만약에 maxDate가 없으면 지금 받은 date로 지정
@@ -58,7 +60,7 @@ class App extends Component {
 
   handlePrev = () => {
     const { date } = this.state;
-    const prevDate = moment(date).subtract(1, 'days').format(YYYY-MM-DD);
+    const prevDate = moment(date).subtract(1, 'days').format('YYYY-MM-DD');
     console.log(prevDate);
     this.getAPOD(prevDate);
   }
@@ -67,7 +69,7 @@ class App extends Component {
     const { date, maxDate } = this.state;
     if (date === maxDate) return;
 
-    const nextDate = moment(date).add(1, 'days').format(YYYY-MM-DD);
+    const nextDate = moment(date).add(1, 'days').format('YYYY-MM-DD');
     this.getAPOD(nextDate);
   }
     

@@ -79,7 +79,11 @@
       "react/jsx-filename-extension": 0,
       "react/jsx-one-expression-per-line": 0,
       "react/no-unused-state": 1,
-      "react/destructuring-assignment": 1
+      "react/destructuring-assignment": 1,
+      "react/prop-types": 1,
+      "jsx-a11y/click-events-have-key-events": 0,
+      "jsx-a11y/no-noninteractive-element-interactions": 0,
+      "no-unused-vars": 1
     },
     "env": {
       "browser": true
