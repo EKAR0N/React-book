@@ -32,6 +32,8 @@ class App extends Component {
       // 비구조화 할당 , 새로운 이름
       const { date: retrievedDate, url, media_type: mediaType} = response.data;
 
+      console.log(response)
+
       if (!this.state.maxDate) {
         // 만약에 maxDate가 없으면 지금 받은 date로 지정
         this.setState({
