@@ -1,8 +1,11 @@
 {
 	"folders": [
-		{
-			"path": "."
-		}
+    {
+      "path": "."
+    },
+    {
+      "path": "/Users/wdever/Desktop/theme"
+    }
   ],
   "settings": {
     "files.associations": {
