@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "tslint-react",
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "variable-name": false,
+  }
+}
