@@ -15,8 +15,10 @@ interface Props {
 
 const TodoItem: React.SFC<Props> = ({ text, done, handleRemove, handleDone }) => {
   return (
-    <ItemDiv onClick={handleDone} style={ done ? { textDecoration: 'line-through', color: 'red' } : {} }>
-      {text}
+    <ItemDiv>
+      <div onClick={handleDone} style={ done ? { textDecoration: 'line-through', color: 'red' } : {} }>
+        {text}
+      </div>
       <div style={{ color: 'red', margin: '0 0.5rem 0 0.5rem'}} onClick={handleRemove}>
         X
       </div>

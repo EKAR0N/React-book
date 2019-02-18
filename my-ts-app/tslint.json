@@ -6,5 +6,6 @@
   ],
   "rules": {
     "variable-name": false,
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
   }
 }

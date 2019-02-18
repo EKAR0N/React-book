@@ -1,9 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface Props {
-
-}
+interface Props {}
 
 const Template = styled.div`
   width: 100%;

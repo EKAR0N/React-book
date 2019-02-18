@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
+    // "outDir": "build/dist",
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext",
+      "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -21,6 +22,7 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
+    // "baseUrl": "./src"
   },
   "include": [
     "src"
