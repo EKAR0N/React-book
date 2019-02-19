@@ -1,8 +1,8 @@
 import * as React from 'react';
 import TodoInput from '../components/TodoInput';
-import { actionCreators as todoListActions, TodoItem } from "../store/modules/todoList";
+import { actionCreators as todoListActions, TodoItem, TodoListActions } from "../store/modules/todoList";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import { bindActionCreators, Dispatch } from "redux";
 import { StoreState } from "../store/modules";
 
 type Props = {
@@ -25,6 +25,10 @@ class TodoListContainer extends React.Component<Props> {
 
     const { TodoListActions } = this.props;
     const { input } = this.props;
+
+    // const payload = {
+    //   text: input,
+    // };
 
     TodoListActions.create(input);
   }
@@ -59,7 +63,7 @@ const mapStateToProps = ({ todoListReducer }: StoreState) => ({
   input: todoListReducer.input,
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   TodoListActions: bindActionCreators(todoListActions, dispatch),
 });
 
