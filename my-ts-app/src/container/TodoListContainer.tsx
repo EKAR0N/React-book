@@ -2,7 +2,7 @@ import * as React from 'react';
 import TodoList from '../components/TodoList'
 import { actionCreators as todoListActions, TodoItem } from "../store/modules/todoList";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import { bindActionCreators, Dispatch } from "redux";
 import { StoreState } from "../store/modules";
 
 type Props = {
@@ -57,7 +57,7 @@ const mapStateToProps = ({ todoListReducer }: StoreState) => ({
   todos: todoListReducer.todos,
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   TodoListActions: bindActionCreators(todoListActions, dispatch),
 });
 

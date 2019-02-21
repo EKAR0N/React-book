@@ -2,7 +2,7 @@ import * as React from "react";
 import Counter from '../components/Counter';
 import { actionCreators as counterActions } from "../store/modules/counter";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import { bindActionCreators, Dispatch } from "redux";
 import { StoreState } from "../store/modules";
 
 type Props = {
@@ -40,7 +40,7 @@ const mapStateProps = ({ counterReducer }: StoreState) => ({
   value: counterReducer.value,
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   CounterActions: bindActionCreators(counterActions, dispatch)
 });
 

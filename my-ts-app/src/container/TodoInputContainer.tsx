@@ -23,6 +23,8 @@ class TodoListContainer extends React.Component<Props> {
   handleClick = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
+    console.log(e.currentTarget);
+
     const { TodoListActions } = this.props;
     const { input } = this.props;
 
