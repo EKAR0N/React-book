@@ -1,11 +1,11 @@
-import * as React from "react";
-import "./App.css";
-import Profile from "./components/Profile";
-import TodoTemplate from "./components/TodoTemplate";
-import TodoInput from "./components/TodoInput";
+import * as React from 'react';
+import './App.css';
+import Profile from './components/Profile';
+import TodoTemplate from './components/TodoTemplate';
+import TodoInput from './components/TodoInput';
 import TodoInputContainer from './container/TodoInputContainer';
 import TodoListContainer from './container/TodoListContainer';
-import TodoList from "./components/TodoList";
+import TodoList from './components/TodoList';
 import CounterContainer from './container/CounterContainer';
 
 interface Props {}
@@ -23,14 +23,14 @@ interface State {
 
 class App extends React.Component<Props, State> {
   state: State = {
-    input: "",
+    input: '',
     todos: [
       {
         id: 0,
-        text: "First Todo",
-        done: false
-      }
-    ]
+        text: 'First Todo',
+        done: false,
+      },
+    ],
   };
 
   id = 1;
@@ -39,7 +39,7 @@ class App extends React.Component<Props, State> {
     const { value } = e.currentTarget;
 
     this.setState(() => ({
-      input: value
+      input: value,
     }));
   };
 
@@ -47,12 +47,12 @@ class App extends React.Component<Props, State> {
     e.preventDefault();
 
     this.setState(({ input, todos }) => ({
-      input: "",
+      input: '',
       todos: todos.concat({
         id: this.id++,
         text: input,
-        done: false
-      })
+        done: false,
+      }),
     }));
 
     console.log(this.state);
@@ -66,7 +66,7 @@ class App extends React.Component<Props, State> {
 
     const nextItem = {
       ...selectedItem,
-      done: !selectedItem.done
+      done: !selectedItem.done,
     };
 
     nextItems[idx] = nextItem; // 교체 처리
@@ -78,17 +78,12 @@ class App extends React.Component<Props, State> {
 
   handleRemove = (id: number): void => {
     this.setState(({ todos }) => ({
-      todos: todos.filter(item => item.id != id)
+      todos: todos.filter(item => item.id != id),
     }));
   };
 
   render() {
-    const {
-      handleChange,
-      handleClick,
-      handleDone,
-      handleRemove
-    } = this;
+    const { handleChange, handleClick, handleDone, handleRemove } = this;
     const { input, todos } = this.state;
     return (
       <div className="App">
